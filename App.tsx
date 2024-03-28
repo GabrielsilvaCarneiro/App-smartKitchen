@@ -7,7 +7,7 @@ export default function App() {
 
   return (
     <View style={ESTILOS.container}>
-      <StatusBar barStyle="dark-content" translucent={true} backgroundColor="#F15F15F15" />
+      <StatusBar barStyle="light-content" translucent={true} backgroundColor="#000000"/>
       <Text style={ESTILOS.header}>Cozinha fácil</Text>
       <View style={ESTILOS.form}>
         <Text style={ESTILOS.label}>Insira abaixo os ingredientes</Text>
@@ -34,7 +34,7 @@ export default function App() {
       </View>
 
       <ScrollView 
-      style={ESTILOS.containerScroll} showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 24, marginTop: 4, }} >
+      style={ESTILOS.containerScroll} showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom:20, marginTop: 4, }} >
 
 <View style={ESTILOS.content}>
   <Text style={ESTILOS.title}>Produzindo receita...</Text>
@@ -59,12 +59,12 @@ const ESTILOS = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f1f1f1',
     alignItems: 'center',
-    paddingTop: 20,
+    paddingTop: 30,
   },
   header: {
     fontSize: 32,
     fontWeight: 'bold',
-    paddingTop: Platform.OS === 'android' ? alturaStatusBar : 54
+    paddingTop: Platform.OS === 'android' ? 44 : 54
   },
   form: {
     backgroundColor: '#FFF',
@@ -96,6 +96,7 @@ const ESTILOS = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 8,
+
   },
   buttonText: {
     fontSize: 18,
@@ -105,9 +106,9 @@ const ESTILOS = StyleSheet.create({
 
   content: {
     backgroundColor: '#FFF',
-    padding: 16,
+    padding: 10,
     width: '100%',
-    marginTop: 16,
+    marginTop: 12,
     borderRadius: 8,
   },
   title: {
